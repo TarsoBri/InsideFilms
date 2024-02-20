@@ -1,0 +1,123 @@
+.list_movies {
+    display: flex;
+    cursor: grab;
+    overflow: hidden;
+    width: 100vw;
+}
+
+.movies {
+    display: flex;
+    align-items: center;
+}
+
+.title_favorite {
+    display: flex;
+    justify-content: space-between;
+    height: 4em;
+    padding-bottom: 1em;
+}
+
+.favorite {
+    background-color: transparent;
+    border: none;
+    font-size: 1.7em;
+    color: white;
+    transition: all .2s;
+    cursor: pointer;
+
+}
+
+.cardMovie {
+    padding: 2em;
+    background-color: #2f2f2f;
+    text-align: start;
+    width: 220px;
+
+}
+
+.cardMovie img {
+    pointer-events: none;
+    width: 100%;
+    height: 250px;
+    transition: all .2s;
+    box-shadow: 16px 16px 16px #0f0f0f90;
+}
+
+
+.title_content {
+    font-size: .9em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title_content span {
+    color: #adadad;
+}
+
+.note {
+    font-size: 1.2em;
+}
+
+.details_btn {
+    display: block;
+    text-align: center;
+    background-color: rgb(165, 0, 0);
+    padding: .8em;
+    margin-top: .8em;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.69);
+}
+
+.details_btn:hover {
+    background-color: rgb(117, 0, 0);
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
+.btn_viewMore_div,
+.btn_backpage_div {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    margin-left: 1em;
+}
+
+.btn_backpage_div {
+    margin: 0;
+}
+
+.btn_viewMore,
+.btn_backpage {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 3em;
+    color: rgb(165, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all .2s;
+}
+
+.btn_viewMore span,
+.btn_backpage span {
+    font-size: .5em;
+    white-space: nowrap;
+}
+
+.btn_viewMore:hover,
+.btn_backpage:hover {
+    color: rgb(117, 0, 0);
+}

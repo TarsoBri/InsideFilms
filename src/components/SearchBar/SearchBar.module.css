@@ -1,0 +1,50 @@
+.searchbar {
+    position: sticky;
+    top: 3.5em;
+    z-index: 98;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(64, 64, 64);
+    padding: .5em;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+form input {
+    color: white;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 50%;
+}
+
+form button {
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 1.8em;
+    cursor: pointer;
+    transition: all .2s;
+
+}
+
+form button:hover {
+    color: rgb(181, 181, 181);
+}
+
+@media (min-width: 700px) {
+    form input {
+        width: 30%;
+    }
+}
+
+@media (min-width: 1200px) {
+    form input {
+        width: 20%;
+    }
+}

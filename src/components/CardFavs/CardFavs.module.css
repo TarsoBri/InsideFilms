@@ -1,0 +1,40 @@
+.card {
+    position: fixed;
+    top: 7em;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    float: right;
+    width: 15em;
+    margin: 1em .5em;
+    z-index: 95;
+    pointer-events: none;
+}
+
+.card p {
+    pointer-events: all;
+    padding: .5em 1.5em .5em .2em;
+    color: black;
+    border-radius: 10px 10px 0 0;
+    font-size: 1em;
+    margin: 0;
+}
+
+.card p span {
+    font-weight: bolder;
+}
+
+.card_loader {
+    height: 5px;
+    border-radius: 0 0 10px 10px;
+    background-color: rgba(255, 255, 255, 0.758);
+}
+
+@media (min-width: 1200px) {
+    .card {
+        width: 20em;
+        right: 5em;
+    }
+
+}
