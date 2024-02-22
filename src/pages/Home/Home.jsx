@@ -1,11 +1,5 @@
 import styles from "./Home.module.css";
 
-//hooks
-import { useFetch } from "../../hooks/useFetch";
-
-//icons
-import { Oval } from "react-loading-icons";
-
 // componets
 import MoviesList from "../../components/MoviesList/MoviesList";
 
@@ -18,7 +12,6 @@ const Home = () => {
 
   return (
     <div className={styles.home}>
-      
       <h2>Mais aclamados do momento</h2>
       <MoviesList url={url} />
 
