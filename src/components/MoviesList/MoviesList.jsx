@@ -29,8 +29,8 @@ const MoviesList = ({ url }) => {
 
   const moviesCarrousel = useRef();
   const [width, setWidth] = useState(0);
-  const [animation, setAnimation] = useState(0);
   const size = useWindowSize();
+  const [animation, setAnimation] = useState(0);
 
   const noteColor = (note) => {
     if (note >= 8) {
@@ -60,11 +60,10 @@ const MoviesList = ({ url }) => {
   const setWidthValue = () =>
     moviesCarrousel.current?.scrollWidth - size.width + 20;
 
-  setTimeout(() => {
-    setWidth(setWidthValue);
-  }, [500]);
   useEffect(() => {
-    setWidth(setWidthValue);
+    if (moviesCarrousel.current?.scrollWidth > size.width) {
+      setWidth(setWidthValue);
+    }
   }, [size.width, movies.results, window.resize]);
 
   return (
@@ -75,11 +74,11 @@ const MoviesList = ({ url }) => {
           {active && <CardFavs type={type} active={active} />}
 
           <motion.div
-            ref={moviesCarrousel}
             className={styles.list_movies}
             whileTap={{ cursor: "grabbing" }}
           >
             <motion.div
+              ref={moviesCarrousel}
               drag="x"
               className={styles.movies}
               dragConstraints={{ right: 0, left: -width }}
